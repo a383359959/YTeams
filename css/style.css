@@ -1,0 +1,62 @@
+*{
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+}
+.clear{
+    clear: both;
+}
+header{
+    border-top: solid 4px #31c27c;
+    padding: 10px;
+    border-bottom: solid 1px #ededed;
+    -webkit-app-region: drag;
+}
+.header_text{
+    float: left;
+    line-height: 34px;
+    color: #666;
+}
+.header_close{
+    float: right;
+    height: 34px;
+    width: 34px;
+    background: url(../images/close.png);
+}
+.header_close:hover{
+    background: url(../images/close_hover.png);
+}
+.login_main{
+    margin: 54px 40px;
+    /*margin-top: 20px;*/
+}
+.login_main li{
+    border-bottom: solid 1px #ececec;
+    margin-top: 30px;
+}
+.login_main li input{
+    border: none;
+    padding-left: 29px;
+    padding-right: 10px;
+    line-height: 30px;
+    width: calc(100% - 39px);
+    color: #333;
+}
+.login_main li:nth-child(1) input{
+    background: url("../images/login_ico_username.png") no-repeat left center;
+}
+.login_main li:nth-child(2) input{
+    background: url("../images/login_ico_password.png") no-repeat left center;
+}
+.login_main a{
+    background: #31c27c;
+    color: #fff;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+}
