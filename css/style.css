@@ -10,6 +10,35 @@
 .clear{
     clear: both;
 }
+.loading_bg{
+    background: #000;
+    opacity: 0.3;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 99;
+}
+.loading_main{
+    position: fixed;
+    z-index: 100;
+    border-radius: 5px;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -15px;
+}
+.loading_main img{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+}
 header{
     border-top: solid 4px #31c27c;
     padding: 10px;
