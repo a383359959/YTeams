@@ -89,3 +89,201 @@ header{
     text-align: center;
     border-radius: 4px;
 }
+.banner{
+    background: url("../images/banner.jpg") no-repeat center center;
+    padding: 10px 0px;
+    min-height: 150px;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+}
+.banner a.create{
+    display: block;
+    background: #ff4530;
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 0 1px transparent;
+    border-radius: 4px;
+    text-align: center;
+    width: 120px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -90px;
+    margin-top: -25px;
+}
+.header{
+    -webkit-app-region: drag;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+}
+@font-face {
+    font-family: 'Delius Swash Caps';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Delius Swash Caps'), local('DeliusSwashCaps-Regular'), url(https://font.apizza.net/s/deliusswashcaps/v9/uXyrEUnoWApxIOICunRq7xbQRjsi10T1l0tKsMkz-vA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+.logo{
+    font-family: 'Delius Swash Caps',cursive;
+    float: left;
+    margin-left: 15px;
+    color: #555;
+    font-size: 24px;
+    padding: 15px;
+    line-height: 20px;
+}
+.user_item{
+    float: right;
+    margin-right: 15px;
+}
+.user_item li{
+    float: left;
+    line-height: 50px;
+    margin-left: 10px;
+    color: #555;
+}
+.user_item li a{
+    color: #555;
+}
+.pro_list{
+    position: fixed;
+    padding-bottom: 5%;
+    top: 220px;
+    left: 0px;
+    bottom: 31px;
+    width: 100%;
+    overflow-y: auto;
+}
+.pro_list li{
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    float: left;
+    padding: 30px;
+    width: calc((100% - 20% - 180px - 6px) / 3);
+    margin-left: 5%;
+    margin-top: 5%;
+    overflow: hidden;
+    position: relative;
+}
+.pro_list li img{
+    display: block;
+    margin: auto;
+}
+.pro_list li i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.pro_list li p{
+    margin-top: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+.pro_list_btn{
+    margin-top: 10px;
+}
+.pro_list_btn a{
+    display: block;
+    width: 49%;
+    background: #ff4530;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    float: left;
+    line-height: 30px;
+}
+.pro_list_btn a:nth-child(2){
+    margin-left: 2%;
+    background: #5f6467;
+}
+.footer{
+    border-top: solid 1px #ddd;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: #fff;
+}
+.footer p{
+    text-align: center;
+    color: #555;
+    line-height: 30px;
+}
+.model_bg{
+    position: fixed;
+    background: #000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.3;
+    z-index: 1;
+    display: none;
+}
+.model_box{
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    height: 190px;
+    margin-top: -95px;
+    background: #fff;
+    z-index: 2;
+    border-radius: 4px;
+    width: 50%;
+    display: none;
+}
+.model_box .title{
+    background: #f5f7f9;
+    text-align: center;
+    padding: 15px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.model_box .content{
+    padding: 15px;
+}
+.model_box .content input{
+    height: 40px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 0px 10px;
+    width: calc(100% - 20px);
+}
+.model_box .btn{
+    padding: 15px;
+    border-top: solid 1px #e5e5e5;
+}
+.model_box .btn a{
+    background: #ff4530;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border-radius: 4px;
+    padding: 8px 20px;
+}
+.model_box.confirm .btn a{
+    float: left;
+    width: calc((98% - 80px) / 2);
+}
+.model_box.confirm .btn a:nth-child(1){
+    margin-right: 2%;
+}
+.model_box.confirm .btn a:nth-child(2){
+    background: #5f6467;
+}
+.pro_list_empty{
+    line-height: 30px;
+    position: absolute;
+    color: #555;
+    left: 0px;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
+    width: 100%;
+}

@@ -1,9 +1,29 @@
 var ip = 'http://192.168.1.108/';
 
 function ajax(url,data,loading,callback){
+    if(url != 'login'){
+        var session = require('electron').remote.session;
+        session.defaultSession.cookies.get({url : ip},function(error,cookies){
+            var API_TOKEN = '';
+            var API_MEMBER_ID = '';
+            for(var i = 0;i < cookies.length;i++){
+                var row = cookies[i];
+                if(row.name == 'token') API_TOKEN = row.value;
+                if(row.name == 'member_id') API_MEMBER_ID = row.value;
+            }
+            var header = {'API-TOKEN' : API_TOKEN,'API-MEMBER-ID' : API_MEMBER_ID};
+            sendData(url,header,data,loading,callback);
+        });
+    }else{
+        sendData(url,{},data,loading,callback);
+    }
+}
+
+function sendData(url,headers,data,loading,callback){
     var obj = {
         url : ip + url,
         type : 'POST',
+        headers : headers,
         dataType : 'json',
         beforeSend : function(){
             if(loading == true) createLoading(0);
@@ -12,7 +32,7 @@ function ajax(url,data,loading,callback){
         success : function (result){
             if(loading == true) createLoading(1);
             if(result.code == 9999){
-
+                require('electron').ipcRenderer.send('logout');
             }else{
                 callback(result);
             }

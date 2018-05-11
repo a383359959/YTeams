@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="css/style.css" />
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/function.js"></script>
-    <script type="text/javascript">
-        if (typeof module == 'object') {window.jQuery = window.$ = module.exports;};
-    </script>
 </head>
 <body>
     <div id="container">
-        asd
+        <div class="header">
+            <div class="logo">ThinkApi</div>
+            <div class="user_item">
+                <ul>
+                    <li></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="banner">
+            <a href="javascript:;" class="create">创建项目</a>
+        </div>
+        <div class="pro_list">
+            <div class="pro_list_empty">暂无项目</div>
+            <ul></ul>
+        </div>
+        <div class="footer">
+            <p>&copy;&nbsp;QiuHao</p>
+        </div>
+        <!-- 创建项目 -->
+        <div class="model_bg"></div>
+        <div class="model_box add_project">
+            <div class="title">创建项目</div>
+            <div class="content">
+                <ul>
+                    <li><input type="text" placeholder="名称" class="pro_name" /></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="save">保存</a>
+            </div>
+        </div>
+        <!-- 删除提示 -->
+        <div class="model_box confirm">
+            <div class="title">提示</div>
+            <div class="content">
+                <ul>
+                    <li style="color: red;">温馨提示：如果点击删除，你的项目和项目里面的API都将被删除，请谨慎。</li>
+                </ul>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="confirm_success">确定</a>
+                <a href="javascript:;" class="confirm_close">取消</a>
+                <div class="clear"></div>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript">
-        $(function(){
-            var ipc = require('electron').ipcRenderer;
-            $('.submit').bind('click',function(){
-                var username = $('input[name="username"]').val();
-                var password = $('input[name="password"]').val();
-                var opt = {
-                    username : username,
-                    password : password
-                };
-                ajax('login',opt,function(result){
-                    if(result.code == 0){
-                        var args = {
-                            type : 'none',
-                            title : '提示',
-                            message : result.message
-                        }
-                        ipc.send('dialog',args);
-                    }else{
-                        ipc.send('mainWindow');
-                    }
-                });
-            });
-        });
-    </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">if(typeof module == 'object') window.jQuery = window.$ = module.exports;</script>
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
 </body>
 </html>
